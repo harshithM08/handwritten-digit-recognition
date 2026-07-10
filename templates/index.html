@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Handwritten Digit Recognition</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>Handwritten Digit Recognition</h1>
+
+    <p>Draw a digit (0–9) and click Predict.</p>
+
+    <canvas id="drawCanvas" width="280" height="280"></canvas>
+
+    <div class="buttons">
+        <button id="predictBtn">Predict</button>
+        <button id="clearBtn">Clear</button>
+    </div>
+
+    <div class="upload">
+        <input type="file" id="imageUpload" accept="image/*">
+    </div>
+
+    <div id="result" class="result">
+
+        <h2>Prediction</h2>
+
+        <h1 id="digit">-</h1>
+
+        <p>
+            Confidence:
+            <span id="confidence">0%</span>
+        </p>
+
+    </div>
+
+</div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
